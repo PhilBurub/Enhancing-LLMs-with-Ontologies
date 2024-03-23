@@ -2,7 +2,7 @@
 _Project 'Enhancing Large Language Models Using Ontologies'_
 
 ## Введение
-Ответы на фактологические вопросы – одна из современных задач LLM. Один из способов улучшения качества – интеграция информации из графов знаний [Pan et al., 2023]. Последние исследования показали, что благодаря этому подходу LLM значительно лучше справляются со многими задачами [Zhang et al., 2020; Salnikov et al., 2023]. В рамках данного проекта мы поставили себе задачу проверить, можно ли добиться сравнимого успеха при использовании не графов знаний, а онтологий – более простых и ёмких структур организации знаний.
+Ответы на фактологические вопросы – одна из современных задач LLM. Один из способов улучшения качества – интеграция информации из графов знаний [Pan et al., 2023]. Последние исследования показали, что благодаря этому подходу LLM значительно лучше справляются со многими задачами [Zhang et al., 2020; Salnikov et al., 2023]. В рамках данного проекта мы поставили себе задачу проверить, можно ли добиться сравнимого успеха при использовании не графов знаний, а онтологий – более простых и ёмких структур организации знаний. Мы сравниваем два типа онтологий между собой: (1) составленную людьми DBPedia Ontology -- "внешнюю" онтологию и (2) выученную LLM во время обучения -- "внутреннюю" онтологию.
 ## Обзор литературы
 [Презентация](https://docs.google.com/presentation/d/1Ln2Prj3NnfQec3x9LGArzj4HZPUxlG5IvLKbyh0-QGQ/edit?usp=sharing)
 ## Методология
@@ -23,12 +23,22 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 1. LLM генерирует варианты (кандидаты) ответов на вопрос и выделяет из него именованные сущности
 2. Кандидаты снабжаются онтологической информацией<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. из онтологии, представленной в текстовом виде с помощью векторного поиска.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос в виде “Question: #текст_вопроса. Answer: #вариант_ответа”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос к базе данных с онтологиями в виде “Question: #текст_вопроса. Answer: #вариант_ответа”<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. путем обращения к LLM.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт в виде “Скажи, как связаны e<sub>i</sub> и c<sub>j</sub>?”<br>
-3. Вопрос + кандидат + онтологическая информация оцениваются sequence ranking’ом
-4. Получается top-1 ответ
-Sequence ranking – отдельная модель, оценивающая вероятность правильного ответа.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт
+
+`You need to generate a hypernym for answer in question-answer pair below and output a string "<Hypernym of answer> is a subclass of <upper-level hypernym>". A hypernym can be a denomination of people, locations, characters, buildings, movies etc. Do not give any additional information, facts and thoughts, answer as short as possible.
+Question: Who is the oldest person to ever win an Academy Award in any category?
+Answer: James Ivory
+Output: Film director is a subclass of artists
+
+Question: #текст_вопроса
+Answer: #вариант_ответа
+Output:`
+
+4. Вопрос + кандидат + онтологическая информация () оцениваются sequence ranking’ом
+5. Получается top-1 ответ
+Sequence ranking – отдельные модели (для каждого из типа онтологий), оценивающая вероятность правильного ответа.
 ## Обучение модели sequence ranking
 #Настя и #Альберт
 ## Результаты
