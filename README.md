@@ -19,11 +19,11 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 Наш пайплайн выглядит следующим образом:
 ![Pipeline.png](https://github.com/PhilBurub/Enhancing-LLMs-with-Ontologies/blob/main/Pipeline.png)
 1. LLM генерирует варианты (кандидаты) ответов на вопрос и выделяет из него именованные сущности
-2. Кандидаты снабжаются онтологической информацией
-    a. из онтологии, представленной в текстовом виде с помощью векторного поиска. 
-      Запрос в виде “Question: #текст_вопроса. Answer: #вариант_ответа”
-    b. путем обращения к LLM. 
-      Промпт в виде “Скажи, как связаны e<sub>i</sub> и c<sub>j</sub>?”
+2. Кандидаты снабжаются онтологической информацией<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. из онтологии, представленной в текстовом виде с помощью векторного поиска.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос в виде “Question: #текст_вопроса. Answer: #вариант_ответа”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. путем обращения к LLM.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт в виде “Скажи, как связаны e<sub>i</sub> и c<sub>j</sub>?”<br>
 3. Вопрос + кандидат + онтологическая информация оцениваются sequence ranking’ом
 4. Получается top-1 ответ
 Sequence ranking – отдельная модель, оценивающая вероятность правильного ответа.
