@@ -11,7 +11,7 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 В качестве бейзлайна мы решили брать первый сгененрированный ответ модели.<br>
 В качестве LLM использовалась gpt-3.5-turbo от OpenAI.
 ## Данные
-### Онтология
+### DBPedia Ontology
 Основу онтологии нашего проекта составляли данные из проекта [DBPedia](https://www.dbpedia.org/), а именно - иерархия классов. 
 Классы были представлены в виде вложенного словаря. Затем на основе каждой пары (родитель, ребёнок) в этом словаре была создана строка типа `Pharaoh is a subclass of Royalty`. Таким образом получился корпус, который можно было легко векторизовать.
 Самый нижний уровень онтологии, где находятся конкретные сущности, не был взят из соображений времени, но в будущих исследованиях мог бы быть обработан аналогичным образом.
@@ -26,14 +26,14 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос к базе данных с онтологиями в виде “Question: #текст_вопроса. Answer: #вариант_ответа”<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. путем обращения к LLM.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт
-`You need to generate a hypernym for answer in question-answer pair below and output a string '<Hypernym of answer\> is a subclass of <upper-level hypernym\>'. A hypernym can be a denomination of people, locations, characters, buildings, movies etc. Do not give any additional information, facts and thoughts, answer as short as possible.
+<code>You need to generate a hypernym for answer in question-answer pair below and output a string '<Hypernym of answer\> is a subclass of <upper-level hypernym\>'. A hypernym can be a denomination of people, locations, characters, buildings, movies etc. Do not give any additional information, facts and thoughts, answer as short as possible.
 Question: Who is the oldest person to ever win an Academy Award in any category?
 Answer: James Ivory
 Output: Film director is a subclass of artists
 
 Question: #текст_вопроса
 Answer: #вариант_ответа
-Output:`
+Output:</code>
 
 4. Вопрос + кандидат + онтологическая информация () оцениваются sequence ranking’ом
 5. Получается top-1 ответ
