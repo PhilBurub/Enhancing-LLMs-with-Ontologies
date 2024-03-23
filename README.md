@@ -23,15 +23,15 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 1. LLM генерирует варианты (кандидаты) ответов на вопрос и выделяет из него именованные сущности
 2. Кандидаты снабжаются онтологической информацией<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. из онтологии, представленной в текстовом виде с помощью векторного поиска.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос к базе данных с онтологиями в виде “Question: #текст_вопроса. Answer: #вариант_ответа”<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос к базе данных с онтологиями в виде *“Question: #текст_вопроса. Answer: #вариант_ответа*”<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. путем обращения к LLM.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт "You need to generate a hypernym for answer in question-answer pair below and output a string '<Hypernym of answer\> is a subclass of <upper-level hypernym\>'. A hypernym can be a denomination of people, locations, characters, buildings, movies etc. Do not give any additional information, facts and thoughts, answer as short as possible.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Промпт *"You need to generate a hypernym for answer in question-answer pair below and output a string '<Hypernym of answer\> is a subclass of <upper-level hypernym\>'. A hypernym can be a denomination of people, locations, characters, buildings, movies etc. Do not give any additional information, facts and thoughts, answer as short as possible.
 Question: Who is the oldest person to ever win an Academy Award in any category?
 Answer: James Ivory
 Output: Film director is a subclass of artists<br>
 Question: #текст_вопроса
 Answer: #вариант_ответа
-Output:"
+Output:"*
 
 4. Вопрос + кандидат + онтологическая информация () оцениваются sequence ranking’ом
 5. Получается top-1 ответ
