@@ -21,7 +21,7 @@ _Project 'Enhancing Large Language Models Using Ontologies'_
 Наш пайплайн выглядит следующим образом:
 ![Pipeline.png](https://github.com/PhilBurub/Enhancing-LLMs-with-Ontologies/blob/main/Pipeline.png)
 1. LLM генерирует варианты (кандидаты) ответов на вопрос и выделяет из него именованные сущности
-2. Кандидаты снабжаются онтологической информацией<br>
+2. Кандидаты снабжаются онтологической информацией методом (1) ИЛИ (2)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. из онтологии, представленной в текстовом виде с помощью векторного поиска.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Запрос к базе данных с онтологиями в виде *“Question: #текст_вопроса. Answer: #вариант_ответа*”<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. путем обращения к LLM.<br>
