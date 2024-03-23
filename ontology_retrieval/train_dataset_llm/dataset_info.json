@@ -1,0 +1,16 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "string_example": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
