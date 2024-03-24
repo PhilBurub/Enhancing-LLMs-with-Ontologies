@@ -63,15 +63,15 @@ Your answer:'`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `ontology_making.ipynb` - создание онтологической информации<br>
 ├─ `GigaChat Call.ipynb` - функции взаимодействия с GigaChat<br>
 ├─ _**sequence_ranking**_ - скрипты и файлы для sequence ranker моделей<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_dbpedia - папка с тестовыми данными для экспериментов с DBPedia Ontology -- вход модели для sequence ranking'а ответов с информацией из DBPedia Ontology<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_dbpedia - папка с данными для обучения модели sequence ranking'а с DBPedia Ontology<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top1 - топ-1 ответ модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_top1 - топ-1 ответ модели на вопрос из теста; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top1 - топ-1 ответ модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_top5 - топ-5 ответов модели на вопрос из теста; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top5 - топ-5 ответов модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_dbpedia` - папка с тестовыми данными для экспериментов с DBPedia Ontology -- вход модели для sequence ranking'а ответов с информацией из DBPedia Ontology<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_dbpedia` - папка с данными для обучения модели sequence ranking'а с DBPedia Ontology<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top1.csv` - топ-1 ответ модели на вопрос из теста<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top5.csv` - топ-5 ответов модели на вопрос из теста<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top5.csv` - топ-5 ответов модели на вопрос из трейна<br>
 ├─ _**...**_ - ...<br>
 ## Состав команды
 - Альберт Корнилов
