@@ -101,13 +101,14 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 - test: `0.304`
   
 ## Перспективы и дальнейшие исследования
-- обработка онтологий, как графов, с помощью Entity Linking (см. [Cao et al. 2021])
+- обработка онтологий, как графов, с помощью Entity Linking (см. [De Cao et al. 2021])
 - анализ взаимодействия онтологий и графов знаний
 ## Ссылки на литературу
+- Cohen, R., Geva, M., Berant, J., & Globerson, A. (2023). Crawling the internal knowledge-base of language models. arXiv preprint arXiv:2301.12810
+- De Cao, N., Wu, L., Popat, K., Artetxe, M., Goyal, N., Plekhanov, M., Zettlemoyer, L., Cancedda, N., Riedel, S. & Petroni, F. (2021). Multilingual autoregressive entity linking. arXiv preprint arXiv:2103.12528 
 - Salnikov, M., Le, H., Rajput, P., Nikishina, I., Braslavski, P., Malykh, V., & Panchenko, A. (2023). Large Language Models Meet Knowledge Graphs to Answer Factoid Questions. arXiv preprint arXiv:2310.02166
 - Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302
 - Zhang, Zh., Liu, X., Zhang, Y., Su, Q., Sun, X., & He, B. (2020). Pretrain-kge: Learning knowledge representation from pretrained language models. In Findings of the Association for Computational Linguistics: EMNLP 2020, Online Event, 16-20 November 2020, volume EMNLP 2020 of Findings of ACL, pages 259–266. Association for Computational Linguistics
-- De Cao, N., Wu, L., Popat, K., Artetxe, M., Goyal, N., Plekhanov, M., Zettlemoyer, L., Cancedda, N., Riedel, S. & Petroni, F. (2021). Multilingual autoregressive entity linking. arXiv preprint arXiv:2103.12528 
 ## Устройство репозитория
 ├─ _**ontology_retrieval**_ - файлы извлечения информации из DBPedia онтологии<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Vectorized_Ontologies_DB.ipynb` - создание базы данных<br>
@@ -115,7 +116,7 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `upper_ontologies_classes.txt` - онтологическая информация, представленная в текстовом виде<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `vectors_corpora.zip` - файлы базы данных<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `ontology_making.ipynb` - создание онтологической информации<br>
-├─ `GigaChat Call.ipynb` - функции взаимодействия с GigaChat<br>
+├─ `GigaChat Call.ipynb` - функции взаимодействия с GigaChat (не использовался в экспериментах)<br>
 ├─ _**sequence_ranking**_ - скрипты и файлы для sequence ranker моделей<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_dbpedia` - папка с тестовыми данными для экспериментов с DBPedia Ontology<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
