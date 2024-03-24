@@ -91,7 +91,7 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 2. Выбираем кандидата, у которого sequence ranker присвоил самый высокий логит единице (т. е. наибольшая вероятность, что этот кандидат самый правильный);
 3. Считаем, для какой доли вопросов этот кандидат совпал с ground truth-лейблом.
 
-1. a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
+a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 - train: `0.566`<br> 
 - test: `0.280`
 
