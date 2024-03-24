@@ -43,11 +43,12 @@ Sequence ranking – отдельные модели (для каждого из
 
 
 
-Baseline: accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.
+**Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.<br>
 Question: #текст_вопроса <br>
 Your answer:'`<br> 
 - train: `0.618`<br> 
 - test: `0.564`
+  
 ## Перспективы
 
 ## Ссылки на литературу
@@ -63,7 +64,7 @@ Your answer:'`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `ontology_making.ipynb` - создание онтологической информации<br>
 ├─ `GigaChat Call.ipynb` - функции взаимодействия с GigaChat<br>
 ├─ _**sequence_ranking**_ - скрипты и файлы для sequence ranker моделей<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_dbpedia` - папка с тестовыми данными для экспериментов с DBPedia Ontology -- вход модели для sequence ranking'а ответов с информацией из DBPedia Ontology<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_dbpedia` - папка с тестовыми данными для экспериментов с DBPedia Ontology<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_dbpedia` - папка с данными для обучения модели sequence ranking'а с DBPedia Ontology<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
