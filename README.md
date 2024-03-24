@@ -43,11 +43,29 @@ Sequence ranking – отдельные модели (для каждого из
 На каждый из вопросов (1000 train, 250 test) мы с помощью модели GPT-3.5 сгенерировали по 5 вариантов ответа, исключили дублирующиеся среди кандидатов ответы.
 #Настя и #Альберт
 
+### Гиперпараметры
+Обе модели обучались с одинаковыми гиперпараметрами для сравнимости:
+- learning_rate: 1e-05
+- train_batch_size: 16
+- eval_batch_size: 16
+- seed: 42
+- optimizer: Adam with betas=(0.9,0.999) and epsilon=1e-08
+- lr_scheduler_type: linear
+- num_epochs: 8
+Обучение занимало от 1 до 1,5 часов на 1 GPU в Google Collab.
+
 ### Модели
 
-ссылки на хф
+[Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)
+Статистика обучения:<br> 
+`Loss: 0.9288`<br> 
+`F1: 0.3417`<br> 
+`Precision: 0.3049`<br> 
+`Recall: 0.3886`<br> 
+`Accuracy: 0.7403`<br> 
 
-### Гиперпараметры
+[Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)
+
 
 
 ## Результаты
@@ -55,9 +73,9 @@ Sequence ranking – отдельные модели (для каждого из
 
 
 
-**Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.<br>
-Question: #текст_вопроса <br>
-Your answer:'`<br> 
+**Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.`<br>
+Question: #текст_вопроса` <br>
+`Your answer:'`<br> 
 - train: `0.618`<br> 
 - test: `0.564`
   
