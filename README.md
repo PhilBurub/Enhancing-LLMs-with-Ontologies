@@ -80,12 +80,14 @@ Sequence ranking – отдельные модели (для каждого из
 - train: `0.618`<br> 
 - test: `0.564`
   
-## Перспективы
-
+## Перспективы и дальнейшие исследования
+- обработка онтологий, как графов, с помощью Entity Linking (см. [Cao et al. 2021])
+- анализ взаимодействия онтологий и графов знаний
 ## Ссылки на литературу
 - Salnikov, M., Le, H., Rajput, P., Nikishina, I., Braslavski, P., Malykh, V., & Panchenko, A. (2023). Large Language Models Meet Knowledge Graphs to Answer Factoid Questions. arXiv preprint arXiv:2310.02166
 - Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302
 - Zhang, Zh., Liu, X., Zhang, Y., Su, Q., Sun, X., & He, B. (2020). Pretrain-kge: Learning knowledge representation from pretrained language models. In Findings of the Association for Computational Linguistics: EMNLP 2020, Online Event, 16-20 November 2020, volume EMNLP 2020 of Findings of ACL, pages 259–266. Association for Computational Linguistics
+- De Cao, N., Wu, L., Popat, K., Artetxe, M., Goyal, N., Plekhanov, M., Zettlemoyer, L., Cancedda, N., Riedel, S. & Petroni, F. (2021). Multilingual autoregressive entity linking. arXiv preprint arXiv:2103.12528 
 ## Устройство репозитория
 ├─ _**ontology_retrieval**_ - файлы извлечения информации из DBPedia онтологии<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Vectorized_Ontologies_DB.ipynb` - создание базы данных<br>
