@@ -77,8 +77,6 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 
 
 ## Результаты
-#Настя и #Альберт
-
 
 
 **Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.`<br>
@@ -87,6 +85,19 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 
 - train: `0.618`<br> 
 - test: `0.564`
+
+Подсчет accuracy для sequence ranker'а производился так:
+1. Для каждого вопроса в изначальном валидационном датасете берем всех кандидатов, которые ему соответствуют;
+2. Выбираем кандидата, у которого sequence ranker присвоил самый высокий логит единице (т. е. наибольшая вероятность, что этот кандидат самый правильный);
+3. Считаем, для какой доли вопросов этот кандидат совпал с ground truth-лейблом.
+
+1. a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
+- train: `0.566`<br> 
+- test: `0.280`
+
+b. [Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)<br>
+- train: `0.601`<br> 
+- test: `0.304`
   
 ## Перспективы и дальнейшие исследования
 - обработка онтологий, как графов, с помощью Entity Linking (см. [Cao et al. 2021])
