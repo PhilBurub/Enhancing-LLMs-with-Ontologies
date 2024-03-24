@@ -41,11 +41,13 @@ Sequence ranking – отдельные модели (для каждого из
 ## Обучение модели sequence ranking
 ### Датасеты для обучения
 
-На каждый из вопросов (1000 train, 250 test) мы с помощью модели GPT-3.5 сгенерировали по 5 вариантов ответа, исключили дублирующиеся среди кандидатов ответы.
-#Настя и #Альберт
+На каждый из вопросов (1000 train, 250 test) мы с помощью модели GPT-3.5 сгенерировали по 5 вариантов ответа, исключили дублирующиеся среди кандидатов ответы, представили вопросы, ответы и онтологии в виде последовательности
+`#вопрос + [SEP] + #ответ +  [SEP] + #онтология`<br>
+Онтология получается методом (1) или (2) (см. схему)
 
 ### Основная модель
 
+This model is a fine-tuned version of bert-large-cased 
 
 ### Гиперпараметры
 Обе модели обучались с одинаковыми гиперпараметрами для сравнимости:
@@ -60,7 +62,9 @@ Sequence ranking – отдельные модели (для каждого из
 
 ### Обученные модели
 
-1. a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
+1.
+
+a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
 `Loss 1.063`<br>
 `F1 0.34127`<br> 
@@ -76,9 +80,10 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 `Recall: 0.3886`<br> 
 `Accuracy: 0.7403`<br> 
 
+2. 
+
 
 ## Результаты
-
 
 **Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.`<br>
 `Question: #текст_вопроса` <br>
@@ -93,12 +98,12 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 3. Считаем, для какой доли вопросов этот кандидат совпал с ground truth-лейблом.
 
 a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
-- train: `0.566`<br> 
-- test: `0.280`
+- **accuracy** on train: `0.566`<br> 
+- **accuracy** on test: `0.280`
 
 b. [Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)<br>
-- train: `0.601`<br> 
-- test: `0.304`
+- **accuracy** on train: `0.601`<br> 
+- **accuracy** on test: `0.304`
   
 ## Перспективы и дальнейшие исследования
 - обработка онтологий, как графов, с помощью Entity Linking (см. [De Cao et al. 2021])
