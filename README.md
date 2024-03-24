@@ -74,8 +74,9 @@ Sequence ranking – отдельные модели (для каждого из
 
 
 **Baseline:** accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.`<br>
-Question: #текст_вопроса` <br>
+`Question: #текст_вопроса` <br>
 `Your answer:'`<br> 
+
 - train: `0.618`<br> 
 - test: `0.564`
   
