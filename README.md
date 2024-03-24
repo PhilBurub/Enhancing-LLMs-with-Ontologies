@@ -155,7 +155,8 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top1.csv` - топ-1 ответ модели на вопрос из теста<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top5.csv` - топ-5 ответов модели на вопрос из теста<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top5.csv` - топ-5 ответов модели на вопрос из трейна<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Experiments_with_DBPedia_ontology.ipynb` - sequence ranker + "внешняя" онтология
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Experiments_with_DBPedia_ontology.ipynb` - sequence ranker + "внешняя" онтология<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Experiments_with_DBPedia_ontology.ipynb` - sequence ranker + "внутренняя" онтология
 ├─ _**...**_ - ...<br>
 ## Состав команды
 - Альберт Корнилов
