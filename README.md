@@ -82,7 +82,7 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 
 2. bert-large
 
-a. Sequence ranker для DBPedia онтологии
+a. Sequence ranker для DBPedia онтологии<br>
 Статистика обучения:<br>
 `Loss 0.7061`<br>
 `F1 0.3850`<br> 
@@ -90,7 +90,7 @@ a. Sequence ranker для DBPedia онтологии
 `Recall 0.3731`<br> 
 `Accuracy 0.7934`<br> 
 
-b. Sequence ranker для онтологии из самой LLM
+b. Sequence ranker для онтологии из самой LLM<br>
 Статистика обучения:<br> 
 `Loss: 0.6770`<br> 
 `F1: 0.3641`<br> 
