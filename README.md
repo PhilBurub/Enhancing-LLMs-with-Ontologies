@@ -40,6 +40,12 @@ Sequence ranking – отдельные модели (для каждого из
 #Настя и #Альберт
 ## Результаты
 #Настя и #Альберт
+
+Baseline: accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.
+Question: #текст_вопроса <br>
+Your answer:'`<br> 
+train: `0.618`
+test: `0.564`
 ## Перспективы
 
 ## Ссылки на литературу
