@@ -41,11 +41,13 @@ Sequence ranking – отдельные модели (для каждого из
 ## Результаты
 #Настя и #Альберт
 
+
+
 Baseline: accuracy по топ-1 выдаче модели, промпт `You need to answer the question below only with the name of person, location, chatacter etc. Do not give any additional information, facts and thoughts.
 Question: #текст_вопроса <br>
 Your answer:'`<br> 
-train: `0.618`<br> 
-test: `0.564`
+- train: `0.618`<br> 
+- test: `0.564`
 ## Перспективы
 
 ## Ссылки на литературу
@@ -53,13 +55,23 @@ test: `0.564`
 - Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2023). Unifying Large Language Models and Knowledge Graphs: A Roadmap. arXiv preprint arXiv:2306.08302
 - Zhang, Zh., Liu, X., Zhang, Y., Su, Q., Sun, X., & He, B. (2020). Pretrain-kge: Learning knowledge representation from pretrained language models. In Findings of the Association for Computational Linguistics: EMNLP 2020, Online Event, 16-20 November 2020, volume EMNLP 2020 of Findings of ACL, pages 259–266. Association for Computational Linguistics
 ## Устройство репозитория
-├─ _**ontology_retrieval**_ - файлы извлечения информации из онтологий<br>
+├─ _**ontology_retrieval**_ - файлы извлечения информации из DBPedia онтологии<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `Vectorized_Ontologies_DB.ipynb` - создание базы данных<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `database.py` - обёртка для загрузки и взаимодействия с базой<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `upper_ontologies_classes.txt` - онтологическая информация, представленная в текстовом виде<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `vectors_corpora.zip` - файлы базы данных<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `ontology_making.ipynb` - создание онтологической информации<br>
 ├─ `GigaChat Call.ipynb` - функции взаимодействия с GigaChat<br>
+├─ _**sequence_ranking**_ - скрипты и файлы для sequence ranker моделей
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_dbpedia - папка с тестовыми данными для экспериментов с DBPedia Ontology -- вход модели для sequence ranking'а ответов с информацией из DBPedia Ontology
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_dbpedia - папка с данными для обучения модели sequence ranking'а с DBPedia Ontology
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top1 - топ-1 ответ модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_top1 - топ-1 ответ модели на вопрос из теста; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top1 - топ-1 ответ модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ test_dataset_top5 - топ-5 ответов модели на вопрос из теста; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ train_dataset_top5 - топ-5 ответов модели на вопрос из трейна; добавлением онтологий к этому датасету были получены данные в папках train_dataset_dbpedia и train_dataset_top1
 ├─ _**...**_ - ...<br>
 ## Состав команды
 - Альберт Корнилов
