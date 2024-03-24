@@ -43,6 +43,9 @@ Sequence ranking – отдельные модели (для каждого из
 На каждый из вопросов (1000 train, 250 test) мы с помощью модели GPT-3.5 сгенерировали по 5 вариантов ответа, исключили дублирующиеся среди кандидатов ответы.
 #Настя и #Альберт
 
+### Основная модель
+
+
 ### Гиперпараметры
 Обе модели обучались с одинаковыми гиперпараметрами для сравнимости:
 - learning_rate: 1e-05
@@ -54,9 +57,9 @@ Sequence ranking – отдельные модели (для каждого из
 - num_epochs: 8
 Обучение занимало от 1 до 1,5 часов на 1 GPU в Google Collab.
 
-### Модели
+### Обученные модели
 
-[Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
+1. a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
 `Loss 1.063`<br>
 `F1 0.34127`<br> 
@@ -64,7 +67,7 @@ Sequence ranking – отдельные модели (для каждого из
 `Recall 0.4456`<br> 
 `Accuracy 0.7017`<br> 
 
-[Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)<br>
+b. [Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)<br>
 Статистика обучения:<br> 
 `Loss: 0.9288`<br> 
 `F1: 0.3417`<br> 
