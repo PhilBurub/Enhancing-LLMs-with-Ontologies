@@ -62,7 +62,7 @@ This model is a fine-tuned version of bert-large-cased
 
 ### Обученные модели
 
-1.
+1. bert-base
 
 a. [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
@@ -80,7 +80,23 @@ b. [Sequence ranker для онтологии из самой LLM на huggingfa
 `Recall: 0.3886`<br> 
 `Accuracy: 0.7403`<br> 
 
-2. 
+2. bert-large
+
+a. Sequence ranker для DBPedia онтологии
+Статистика обучения:<br>
+`Loss 0.7061`<br>
+`F1 0.3850`<br> 
+`Precision 0.3978`<br> 
+`Recall 0.3731`<br> 
+`Accuracy 0.7934`<br> 
+
+b. Sequence ranker для онтологии из самой LLM
+Статистика обучения:<br> 
+`Loss: 0.6770`<br> 
+`F1: 0.3641`<br> 
+`Precision: 0.3604`<br> 
+`Recall: 0.3679`<br> 
+`Accuracy: 0.7772`<br> 
 
 
 ## Результаты
