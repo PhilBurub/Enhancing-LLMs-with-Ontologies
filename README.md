@@ -67,7 +67,7 @@ Your answer:'`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_dbpedia` - папка с тестовыми данными для экспериментов с DBPedia Ontology<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_dbpedia` - папка с данными для обучения модели sequence ranking'а с DBPedia Ontology<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_llm - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top1.csv` - топ-1 ответ модели на вопрос из теста<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
