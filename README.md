@@ -56,7 +56,7 @@ Sequence ranking – отдельные модели (для каждого из
 
 ### Модели
 
-[Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)
+[Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
 `Loss 0.34127`<br> 
 `F1 0.34127`<br> 
@@ -64,7 +64,7 @@ Sequence ranking – отдельные модели (для каждого из
 `Recall 0.4456`<br> 
 `Accuracy 0.7017`<br> 
 
-[Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)
+[Sequence ranker для онтологии из самой LLM на huggingface](https://huggingface.co/bert-base/sequence-ranker-for-llm-ontology)<br>
 Статистика обучения:<br> 
 `Loss: 0.9288`<br> 
 `F1: 0.3417`<br> 
