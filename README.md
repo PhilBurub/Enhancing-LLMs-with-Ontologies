@@ -58,7 +58,11 @@ Sequence ranking – отдельные модели (для каждого из
 
 [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
-`Loss 0.34127`<br> 
+`Loss 1.063`<br> 
+F1: 0.3413
+Precision: 0.2765
+Recall: 0.4456
+Accuracy: 0.7017
 `F1 0.34127`<br> 
 `Precision 0.2765`<br> 
 `Recall 0.4456`<br> 
@@ -108,7 +112,6 @@ Sequence ranking – отдельные модели (для каждого из
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_llm` - папка с тестовыми данными для экспериментов sequence ranking'а с внутренней онтологией LLM<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top1.csv` - топ-1 ответ модели на вопрос из теста<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top1.csv` - топ-1 ответ модели на вопрос из трейна<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `test_dataset_top5.csv` - топ-5 ответов модели на вопрос из теста<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `train_dataset_top5.csv` - топ-5 ответов модели на вопрос из трейна<br>
 ├─ _**...**_ - ...<br>
