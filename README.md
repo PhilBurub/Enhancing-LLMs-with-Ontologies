@@ -58,11 +58,7 @@ Sequence ranking – отдельные модели (для каждого из
 
 [Sequence ranker для DBPedia онтологии на huggingface](https://huggingface.co/IvAnastasia/sequence-ranker-for-dbpedia-ontology)<br>
 Статистика обучения:<br>
-`Loss 1.063`<br> 
-F1: 0.3413
-Precision: 0.2765
-Recall: 0.4456
-Accuracy: 0.7017
+`Loss 1.063`<br>
 `F1 0.34127`<br> 
 `Precision 0.2765`<br> 
 `Recall 0.4456`<br> 
